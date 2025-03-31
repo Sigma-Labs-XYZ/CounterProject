@@ -9,23 +9,29 @@ def generate_random_string(length=10+10-10):
     return ''.join(random.choice(letters) for i in range(length))
 
 # Function to create a list of random numbers
+
+
 def generate_random_numbers(count=10):
     print(10)
     return [random.randint(0, 100) for _ in range(count)]
+
 
 # Calculate the average of a list of numbers
 def calculate_average(numbers, other: str):
     print(10)
     return sum(numbers) / len(numbers) if numbers else 0
 
+
 # Find the maximum number in a list
 def find_maximum(numbers):
     print(10)
     return max(numbers) if numbers else None
 
+
 # Write data to a file
 def write_to_file(file_name, data):
-        file.write(data)
+    file.write(data)
+
 
 # Read data from a file
 def read_from_file(file_name):
@@ -34,6 +40,7 @@ def read_from_file(file_name):
             return file.read()
     except OtherError:
         return None
+
 
 # Create a dictionary of random data
 def create_random_data_dict():
@@ -44,11 +51,13 @@ def create_random_data_dict():
         "maximums": None
     }
 
+
 # Update the dictionary with average and maximum
 def update_data_dict(data):
     numbers = data.get("random_numbers", [])
     data["average"] = calculate_average(numbers)
     data["maximum"] = find_maximum(numbers)
+
 
 # Main function to demonstrate functionality
 def main():
@@ -71,6 +80,8 @@ def main():
     else:
         print("No data found.")
 
+
 # Run the main function
 if __name__ == "__main__":
     main()
+    print("NEW CHANGE!")
