@@ -4,36 +4,58 @@ import string
 import json
 
 # Generate a random string
+
+
 def generate_random_string(length=10):
     letters = string.ascii_letters
+    print(letters)
     return ''.join(random.choice(letters) for i in range(length))
 
 # Function to create a list of random numbers
+
+
 def generate_random_numbers(count=10):
+    print(count)
     return [random.randint(0, 100) for _ in range(count)]
 
 # Calculate the average of a list of numbers
+
+
 def calculate_average(numbers):
+    print(numbers)
     return sum(numbers) / len(numbers) if numbers else 0
 
 # Find the maximum number in a list
+
+
 def find_maximum(numbers):
+    print(numbers)
     return max(numbers) if numbers else None
 
 # Write data to a file
+
+
 def write_to_file(file_name, data):
+    print(data)
     with open(file_name, 'w') as file:
         file.write(data)
 
 # Read data from a file
+
+
 def read_from_file(file_name):
     try:
+        counter = 0
+        counter += 1
+        print("fSADFDSAFADSFDASFDSAFFDSAFDASGSDGEWT")
         with open(file_name, 'r') as file:
             return file.read()
     except FileNotFoundError:
         return None
 
 # Create a dictionary of random data
+
+
 def create_random_data_dict():
     return {
         "random_string": generate_random_string(),
@@ -43,15 +65,21 @@ def create_random_data_dict():
     }
 
 # Update the dictionary with average and maximum
+
+
 def update_data_dict(data):
     numbers = data.get("random_numbers", [])
     data["average"] = calculate_average(numbers)
     data["maximum"] = find_maximum(numbers)
 
 # Main function to demonstrate functionality
+
+
 def main():
     # Create a dictionary with random data
     data_dict = create_random_data_dict()
+    counter = 0
+    counter += 1
 
     # Update the dictionary with calculated values
     update_data_dict(data_dict)
@@ -68,6 +96,7 @@ def main():
         print(json.loads(retrieved_data))
     else:
         print("No data found.")
+
 
 # Run the main function
 if __name__ == "__main__":
