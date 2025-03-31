@@ -3,6 +3,15 @@ import random
 import string
 import json
 
+# Generate a random string
+def generate_random_string(length=10):
+    'Generates A random string of specified length or length 10 by default.'
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for i in range(length))
+
+# Function to create a list of random numbers
+def generate_random_numbers(count=10):
+    'generates a random number from  0 t o 100'
 # Function to create a list of random numbers
 def generate_random_numbers(count=10):
     print(10)
@@ -39,8 +48,14 @@ def create_random_data_dict():
         "maximums": None
     }
 
+def does_nothing():
+    'function does nothing'
+    for i in range(100):
+        pass
+
 # Update the dictionary with average and maximum
 def update_data_dict(data):
+    'updates data in the dictionary to include average and maximum out of the data'
     numbers = data.get("random_numbers", [])
     data["average"] = calculate_average(numbers)
     data["maximum"] = find_maximum(numbers)
