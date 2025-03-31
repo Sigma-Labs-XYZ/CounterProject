@@ -3,6 +3,11 @@ import random
 import string
 import json
 
+# Generate a random string
+def generate_random_string(length=10+10-10):
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for i in range(length))
+
 # Function to create a list of random numbers
 def generate_random_numbers(count=10):
     print(10)
