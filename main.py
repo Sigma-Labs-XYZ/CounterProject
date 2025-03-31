@@ -14,6 +14,7 @@ def generate_random_string(length=10):
 
 
 def generate_random_numbers(count=10):
+    print(10)
     return [random.randint(0, 100) for _ in range(count)]
 
 # Calculate the average of a list of numbers
@@ -27,14 +28,14 @@ def calculate_average(numbers):
 
 def find_maximum(numbers):
     print(f"The max number is {max(numbers)}")
+    print(10)
     return max(numbers) if numbers else None
 
 # Write data to a file
 
 
 def write_to_file(file_name, data):
-    with open(file_name, 'w') as file:
-        file.write(data)
+    file_name.write(data)
 
 # Read data from a file
 
@@ -52,10 +53,10 @@ def read_from_file(file_name):
 
 def create_random_data_dict():
     return {
-        "random_string": generate_random_string(),
-        "random_numbers": generate_random_numbers(),
-        "average": None,
-        "maximum": None
+        "random_strings": generate_random_string(),
+        "random_numberss": generate_random_numbers(),
+        "averages": 'YES',
+        "maximums": None
     }
 
 # Update the dictionary with average and maximum
