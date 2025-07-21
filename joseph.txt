@@ -1,0 +1,1 @@
+This is a .txt file named joseph.txt It contains 62 chracters.
